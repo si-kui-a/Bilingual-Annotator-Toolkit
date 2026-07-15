@@ -1,3 +1,10 @@
-.DS_Store
-*.log
-node_modules/
+﻿# whitelist mode: ignore everything, allow only tracked project files
+/*
+!/.gitignore
+!/skills/
+!/README.md
+!/README (1).md
+!/LICENSE
+!/CONTRIBUTING.md
+!/einstein-1905-emc2-excerpt.html
+!/einstein-1905-emc2-quiz.html
