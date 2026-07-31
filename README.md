@@ -46,6 +46,10 @@ For the study-visual companion:
 - 5-dimension color highlighting — semantic mapping remaps per document-type preset, see each `SKILL.md`
 - Fully responsive — single column on mobile
 
+## Examples
+
+See [`examples/`](examples/README.md) for sample HTML output produced from both skills (source/license notes included).
+
 ## Contributing
 
 Open to PRs — see [CONTRIBUTING.md](CONTRIBUTING.md). Found a case where Claude ignores the layout or preset? Open an issue.
