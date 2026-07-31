@@ -17,27 +17,6 @@
 - **實際採用之素材**：僅節錄兩句經多方獨立來源交叉驗證、逐字一致的公有領域原文（開篇句、結論句），非全文轉載。完整全文請自行取用上述 Uni Augsburg 連結，或 [de.Wikisource / Internet Archive](https://de.wikisource.org/wiki/Albert_Einstein) 掃描檔。
 - **翻譯／問答內容**：中文譯文、批注文字、理解題與答案，均為本次示範原創撰寫，非引用任何第三方譯本或教材。
 
-## 已知問題（阻斷項，建議優先處理）
-
-目前 `skills/` 資料夾下的兩個檔案 `bilingual-doc-annotator`、`study-visual-generator` 是**沒有副檔名的純文字檔**，不是 `skills/<name>/SKILL.md` 的資料夾結構。
-
-README 裡的安裝指令：
-```
-cp -r bilingual-annotator-toolkit/skills/* .claude/skills/
-```
-會把這兩個檔案原樣複製成 `.claude/skills/bilingual-doc-annotator`、`.claude/skills/study-visual-generator`（仍是無副檔名純文字檔），而不是 Claude Skills 載入器預期的：
-```
-.claude/skills/bilingual-doc-annotator/SKILL.md
-.claude/skills/study-visual-generator/SKILL.md
-```
-**結果：目前的檔案結構下，這兩個 skill 在 Claude Code / claude.ai 中都無法被正確辨識載入。** 修法：
-```bash
-mkdir -p skills/bilingual-doc-annotator skills/study-visual-generator
-git mv skills/bilingual-doc-annotator skills/bilingual-doc-annotator/SKILL.md
-git mv skills/study-visual-generator skills/study-visual-generator/SKILL.md
-```
-建議在補 `examples/` 的同一個 PR 一併修正，否則範例做得再完整，使用者複製指令後仍無法實際跑起來。
-
 ## GitHub Pages 靜態預覽（非阻斷，可延後）
 
 之後要做的話，最省事路徑：`/docs` 資料夾直接放這些 HTML，repo Settings → Pages → Source 選 `main /docs`，不需要 build step。
