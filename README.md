@@ -41,7 +41,7 @@ For the study-visual companion:
 ## Design system
 
 - Navy header (`#0A192F`) + off-white paper background (`#F8F9FA`)
-- Body font: Lora (serif), with CJK/RTL fallback fonts auto-applied
+- Body font: Lora (serif); CJK (Chinese/Japanese/Korean) source/target text gets serif fallback fonts (Noto Serif TC/JP/KR) — RTL scripts (Arabic, Hebrew, etc.) instead get `dir="rtl"` on the relevant text block, not a CJK font fallback. Two separate rules, see `skills/bilingual-doc-annotator/SKILL.md` STYLE/RULE sections for the source of truth.
 - UI font: IBM Plex Sans
 - 5-dimension color highlighting — semantic mapping remaps per document-type preset, see each `SKILL.md`
 - Fully responsive — single column on mobile
