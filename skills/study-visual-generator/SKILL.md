@@ -6,7 +6,7 @@ CONFIG: TGT_LANG(輸出語言,預設與使用者對話語言一致)
 
 OUTPUT: 單一.html檔,create_file產出,不對話輸出。每種TYPE各自獨立檔案。
 
-SHARED_STYLE: 導航深海軍藍|底色米白|正文Lora|介面IBM Plex Sans|批注卡左色邊+浅背景|Responsive移動端單欄|CJK/RTL語言需對應字體fallback與dir屬性
+SHARED_STYLE: 導航深海軍藍|底色米白|正文Lora|介面IBM Plex Sans|批注卡左色邊+浅背景|Responsive移動端單欄|CJK語言(中/日/韓)正文字體加對應serif fallback(如Noto Serif TC/JP/KR)|RTL語言(阿拉伯文/希伯來文等)則改為相關文字區塊設dir="rtl"屬性,不套用CJK字體fallback——兩者是各自獨立的規則,不是同一套fallback機制
 
 ROUTE(依需求選TYPE,可多選並行,若使用者僅給主題無細節→先問要哪個TYPE,禁止一次全生成):
 
