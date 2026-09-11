@@ -1,5 +1,11 @@
 """
-verify_project_contract.py — 這個repo唯一能離線驗證的兩件事，零依賴、純標準庫。
+check_skill_contracts.py — 這個repo唯一能離線驗證的兩件事，零依賴、純標準庫。
+
+命名注意：故意不叫`verify_project_contract.py`——那是
+si-kui-a/web-scaffold-toolkit的canonical檔名，專門驗證PROJECT_PROFILE.yaml
+本身欄位是否填齊（display_name/profile/offline_check等7個必填key），
+跟這支腳本檢查的內容完全不同，撞名會誤導未來的人以為這是那支腳本的
+本機副本。
 
 背景：PROJECT_PROFILE.yaml的offline_check欄位原本寫
 `python scripts/verify_project_contract.py && python scripts/run_profile_checks.py`，
